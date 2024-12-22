@@ -19,6 +19,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
+app.get("/api", (req, res) => {
+  res.send("Server is running");
+});
 app.use("/api/data", dataRoutes);
 app.use("/api/notification", pushRoutes);
 
